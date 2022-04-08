@@ -1,0 +1,158 @@
+@use '../base/breakpoints' as *;
+
+.skills {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   padding: 0 2rem;
+
+   @include media(">=tablet") {
+      grid-template-columns: repeat(3, 1fr);
+		padding: 0 4rem;
+	}
+
+   @include media(">=laptop") {
+		padding: 4rem 10rem 0;
+	}
+
+   @include media(">=desktop") {
+		padding: 4rem 12rem 0;
+	}
+
+   &-heading {
+		grid-column: 1 / -1;
+      margin: 1.5rem 0 0;
+		
+	}
+
+   &-body-learned {
+      grid-column: 1 / -1;
+      margin: 2rem 0 1rem 0;
+   }
+
+   &-body-learning {
+      grid-column: 1 / -1;
+      margin: 2rem 0 0.75rem 0;
+
+      @include media(">=tablet") {
+         margin: 3rem 0 0.75rem 0;
+      }
+   }
+
+   &-list,
+   &-learning {
+      margin: 0 0 0 1.5rem;
+
+      @include media(">=tablet") {
+         margin: 1rem 0 0 3.25rem;
+      }
+
+      @include media(">=laptop") {
+         margin: 1.5rem 0 0 11rem;
+      }
+
+      @include media(">=desktop") {
+         margin: 1.5rem 0 0 15rem;
+      }
+   }
+
+   &-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column: 1 / -1;
+      width: 100%;
+      row-gap: 0.5rem;
+
+      @include media(">=tablet") {
+         grid-template-columns: 1fr 1fr 1fr;
+         row-gap: 1rem;
+      }
+
+      @include media(">=laptop") {
+         justify-self: center;
+         width: 80%;
+         row-gap: 1.5rem;
+      }
+
+      @include media(">=desktop") {
+         row-gap: 2.5rem;
+      }
+   }
+
+   
+
+
+   &-field {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+
+      &:hover > img {
+         @include media(">=laptop") {
+            transform: scale(1.1)
+         }
+      }
+
+
+
+      p {
+         font-size: 1rem;
+         font-weight: 600;
+
+         @include media(">=laptop") {
+            font-size: 1.1rem;
+            
+         }
+
+         @include media(">=desktop") {
+            font-size: 1.15rem;
+         }
+      }
+      
+
+      img {
+         width: 32px;
+
+         @include media(">=tablet") {
+            width: 36px;
+         }
+
+         @include media(">=laptop") {
+            width: 44px;
+            transition: all 0.25s ease-out;
+         }
+
+         @include media(">=desktop") {
+            width: 50px;
+         }
+      }
+    }
+
+    &-learning {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column: 1 / -1;
+      width: 100%;
+      
+     
+
+      @include media(">=tablet") {
+         grid-template-columns: 1fr 1fr 1fr;
+         row-gap: 1rem;
+      }
+
+      
+      @include media(">=laptop") {
+         justify-self: center;
+         width: 80%;
+         row-gap: 1.5rem;
+
+         
+      }
+
+      @include media(">=desktop") {
+         row-gap: 2.5rem;
+      }
+   }
+
+}

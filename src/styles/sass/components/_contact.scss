@@ -1,0 +1,59 @@
+@use '../base/breakpoints' as *;
+
+.contact {
+	padding: 0 2rem 1.25rem;
+
+	@include media(">=tablet") {
+		padding: 0 4rem 1.25rem;
+	}
+
+	@include media(">=laptop") {
+		padding: 0 10rem 1.25rem;
+	}
+
+	@include media(">=desktop") {
+		padding: 0 12rem 1.25rem;
+	}
+
+	&-heading {
+		@include media(">=laptop") {
+			margin:4rem 0 0
+		}
+	}
+
+	&-text {
+		font-weight: 600 !important;
+		
+		@include media(">=laptop") {
+			margin-top: 4rem;
+			text-align: center;
+			font-weight: 700 !important;
+		}
+	}
+
+
+	&__form {
+		display: grid;
+		margin: 2rem 0 0;
+
+		@include media(">=tablet") {
+			padding: 0 4rem;
+		}
+
+		
+		@include media(">=laptop") {
+			padding: 1rem 15rem;
+		}
+
+		@include media(">=desktop") {
+			padding: 1rem 22rem;
+		}
+
+		button {
+			justify-self: center;
+			padding: 0.85rem 2.5rem 0.95rem;
+			background: var(--orange);
+			border: none;
+		}
+	}
+}

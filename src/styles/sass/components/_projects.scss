@@ -1,0 +1,33 @@
+@use '../base/breakpoints' as *;
+
+.projects {
+	display: grid;
+	gap: 2rem;
+	padding: 0 2rem 1.25rem;
+	
+   @include media(">=tablet") {
+		grid-template-columns: 1fr 1fr;
+		padding: 0 4rem 1.25rem;
+	}
+
+	@include media(">=laptop") {
+		padding: 0 10rem 1.25rem;
+	}
+
+	
+   @include media(">=desktop") {
+		padding: 0 12rem 1.25rem;
+	}
+
+	&-heading {
+		margin: 2rem 0 0;
+
+		@include media(">=tablet") {
+				grid-column: 1/-1;
+		}
+
+		@include media(">=laptop") {
+			margin: 4rem 0 0;
+		}
+	}
+}

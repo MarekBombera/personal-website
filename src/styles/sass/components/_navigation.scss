@@ -1,0 +1,50 @@
+@use '../base/breakpoints' as *;
+
+.navigation {
+   
+   &-links {
+      display: flex;
+      gap: 2rem;
+
+      @include media(">=laptop") {
+         gap: 4rem;
+      }
+
+   	p {
+         color: white;
+         @include media(">=tablet") {
+            font-size: 1.1rem;
+         }
+
+         @include media(">=laptop") {
+            font-size: 1.2rem;
+         }
+      }
+
+      &-underline {
+			
+			background-image: linear-gradient(
+				120deg,
+				var(--orange) 0%,
+				var(--orange) 100%
+			);
+			background-repeat: no-repeat;
+			background-size: 100% 0.2rem;
+			background-position: 0% 75%;
+			
+         @include media(">=laptop") {
+            transition: all 0.25s ease-out;
+         }
+
+         @include media(">=desktop") {
+            font-size: 1.4rem;
+         }
+
+         &:hover {
+            @include media(">=laptop") {
+               transform: translateY(-6%);
+            }
+         }
+		}
+   }
+}

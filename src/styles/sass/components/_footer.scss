@@ -1,0 +1,65 @@
+@use '../base/breakpoints' as *;
+
+.footer {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	justify-content: center;
+	align-items: center;
+	height: 175px;
+
+	@include media(">=tablet") {
+		height: 200px;
+	}
+	
+	background: var(--background);
+
+	&__social {
+		display: flex;
+		justify-self: center;
+		margin-top: 1.75rem;
+		gap: 1rem;
+
+		@include media(">=laptop") {
+			margin-top: 2rem;
+			gap: 1.25rem;
+		}
+
+		@include media(">=desktop") {
+			margin-top: 2.5rem;
+		}
+
+
+		img {
+			width: 28px;
+			transition: all 0.25s ease-out;
+
+			@include media(">=laptop") {
+				width: 32px;
+			}
+
+			@include media(">=desktop") {
+				width: 36px;
+			}
+			
+			&:hover {
+				@include media(">=laptop") {
+					filter:  sepia(100%) grayscale(1000%) brightness(200%) ;
+				}
+			}
+		}
+	}
+
+	p {
+		margin: 0;
+		font-size: 0.7rem;
+		color: white;
+
+		@include media(">=laptop") {
+			font-size: 0.8rem;
+		}
+
+		@include media(">=desktop") {
+			font-size: 0.9rem;
+		}
+	}
+}

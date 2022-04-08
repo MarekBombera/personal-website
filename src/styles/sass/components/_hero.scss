@@ -1,0 +1,286 @@
+@use '../base/breakpoints' as *;
+
+.hero {
+	display: grid;
+	padding: 0 3rem 0rem;
+	height: 100vh;
+	background: var(--background);
+
+	&__content {
+		display: grid;
+		align-content: center;
+		align-self: center;
+		margin: 5rem 0 0;
+		opacity: 0;
+		gap: 1rem;
+		animation: 0.75s ease-out 0.1s 1 forwards showHeroContentLaptop;
+		
+
+		@include media(">=tablet") {
+			margin: 5rem 0 0 2rem;
+		}
+
+		@include media(">=laptop") {
+			margin: 3.5rem 0 0 6rem;
+		}
+
+		@include media(">=desktop") {
+			margin: 3rem 0 0 10rem;
+			
+		}
+
+		h1 {
+			width: 60%;
+			margin: 0;
+			font-size: 2.5rem;
+			color: white;
+
+			@include media(">=tablet") {
+				width: 75%;
+				font-size: 2.75rem;
+			}
+
+			@include media(">=laptop") {
+				font-size: 3.75rem;
+				width: 55%;
+			}
+
+			@include media(">=desktop") {
+				font-size: 4.5rem;
+				width: 50%;
+			}
+		}
+
+
+		p {
+			display: flex;
+			margin: 0;
+			font-size: 1.2rem;
+			color: white;
+
+			@include media(">=phone") {
+				width: 95%;
+				&,&::after {
+					animation-delay: var(--animation-delay, 2s);
+					animation-iteration-count: var(--iterations, 1);
+					animation-duration: var(--duration, 800ms);
+					animation-fill-mode: both;
+					animation-timing-function: cubic-bezier(0.0, 0.0, 0.5, 1);
+
+				}
+
+				&{
+					--animation-delay: var(--delay);
+					--animation-duration: var(--duration);
+					--animation-iterations: var(--iterations);
+					position: relative;			
+					animation-name: clip-text;
+					color: #FFF;
+					white-space: wrap;
+					cursor: default;
+
+					&::after {
+						content: "";
+						position: absolute;
+						z-index: 999;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						background-color: #FFF;
+						transform: scaleX(0);
+						transform-origin: 0 50%;
+						pointer-events: none;
+						animation-name: text-revealer;
+					}
+				}
+			}
+
+			@include media(">=tablet") {
+				width: 40%;
+			}
+
+			@include media(">=laptop") {
+				width: 80%;
+			}
+
+			
+			@include media(">=laptop") {
+				font-size: 1.25rem;
+				width: 40%;
+			}
+
+			@include media(">=desktop") {
+				font-size: 1.5rem;
+				width: 38%;
+			}
+		}
+	}
+
+	&__social {
+		display: flex;
+		margin: 1rem 0 0;
+		gap: 1rem;
+		opacity: 0;
+		animation: 0.5s ease-out 2.75s 1 forwards showRestOfHeroContent;
+		
+		img {
+			width: 32px;
+			transition: all 0.25s ease-out;
+			
+			&:hover {
+				filter:  sepia(100%) grayscale(1000%) brightness(200%) ;
+			}
+
+			@include media(">=desktop") {
+				width: 38px;
+			}
+		}
+
+
+	}
+
+	&__button {
+		button {
+			margin: 0.75rem 0 0;
+			border: 1px solid var(--orange);
+			opacity: 0;
+			animation: 0.5s ease-out 2.75s 1 forwards showRestOfHeroContent;
+			@include media(">=laptop") {
+				transition: all 0.25s ease-out;
+			}
+
+			@include media(">=desktop") {
+				font-size: 1.2rem;
+			}
+
+			&:hover {
+				@include media(">=laptop") {
+					background: var(--orange);
+					color: white;
+				}
+			}
+		}
+	}
+
+	&__underline {
+		&-web{
+			background-image: linear-gradient(
+				120deg,
+				rgb(214, 105, 78, 0.95) 0%,
+				rgb(214, 105, 78, 0.95) 100%
+			);
+			background-repeat: no-repeat;
+			background-size: 0% 1rem;
+			background-position: 0% 90%;
+			animation: 0.5s ease-out 0.75s 1 forwards underlineWebHero;
+			z-index: -1;
+
+			@include media(">=laptop") {
+				animation: 0.5s ease-out 0.75s 1 forwards underlineWebHero;
+			}
+		}
+
+		&-developer {
+			background-image: linear-gradient(
+				120deg,
+				rgb(214, 105, 78, 0.95) 0%,
+				rgb(214, 105, 78, 0.95) 100%
+			);
+			background-repeat: no-repeat;
+			background-size: 0% 1rem;
+			background-position: 0% 90%;
+			animation: 0.5s ease-out 1.25s 1 forwards underlineDeveloperHero;
+			z-index: -1;
+		}
+	}
+}
+
+
+@keyframes showRestOfHeroContent {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes clip-text {
+	from {
+		clip-path: inset(0 100% 0 0);
+	}
+	to {
+		clip-path: inset(0 0 0 0);
+	}
+}
+
+@keyframes text-revealer {
+	
+	0%, 50% {
+		transform-origin: 0 50%;
+	}
+	
+	60%, 100% {
+		transform-origin: 100% 50%;		
+	}
+
+	
+	60% {
+		transform: scaleX(1);
+	}
+	
+	100% {
+		transform: scaleX(0);
+	}
+}
+
+@keyframes showHeroContent {
+	0% {
+		opacity: 0;
+		transform: translateY(10%);
+	}
+
+	100%{
+		opacity: 1;
+		transform: translateY(-5%);
+	}
+}
+
+@keyframes showHeroContentLaptop {
+	0% {
+		opacity: 0;
+		transform: translateY(40%);
+	}
+
+	100%{
+		opacity: 1;
+		transform: translateY(-5%);
+	}
+}
+
+
+
+@keyframes underlineWebHero {
+	0% {
+		background-size: 0% 1rem;
+		background-position: 0% 90%;
+	}
+	100% {
+		background-size: 100% 1rem;
+		background-position: 0% 90%;
+	}
+}
+
+@keyframes underlineDeveloperHero {
+	0% {
+		background-size: 0% 1rem;
+		background-position: 0% 90%;
+	}
+	100% {
+		background-size: 100% 1rem;
+		background-position: 0% 90%;
+	}
+}
+

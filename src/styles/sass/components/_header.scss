@@ -1,0 +1,60 @@
+@use '../base/breakpoints' as *;
+
+.App {
+	position: relative;
+}
+
+.header {
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.25rem;
+	width: 100%;
+	opacity:0;
+	animation: 1s ease-out 2.75s 1 forwards showHeader;
+	z-index: 99;
+	
+
+	@include media(">=tablet") {
+		padding: 1.25rem 3rem;
+	}
+
+	@include media(">=laptop") {
+		padding: 1.5rem 4.5rem;
+		animation: 1s ease-out 2.75s 1 forwards showHeader;
+	}
+
+	@include media(">=desktop") {
+		padding: 2rem 6rem;
+	}
+
+	&__logo {
+		z-index: 999;
+		img {
+			width: 38px;
+			
+			@include media(">=tablet") {
+				width: 44px;
+			}
+
+			@include media(">=laptop") {
+				width: 58px;
+			}
+
+			@include media(">=desktop") {
+				width: 70px;
+			}
+		}
+	}
+}
+
+@keyframes showHeader {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

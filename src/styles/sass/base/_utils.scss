@@ -1,0 +1,53 @@
+@use '../base/breakpoints' as *;
+
+.heading {
+	
+	font-size: 2.5rem;
+}
+
+.sectionHeading {
+	font-size: 2.5rem;
+	font-weight: 500;
+
+	@include media(">=tablet") {
+		font-size: 2.75rem;
+	}
+	@include media(">=laptop") {
+		font-size: 3.5rem;
+	}
+	@include media(">=desktop") {
+		font-size: 3.75rem;
+	}
+	
+}
+
+.body {
+	font-size: 1rem;
+	letter-spacing: 0.2px;
+	font-weight: 500;
+
+	@include media(">=laptop") {
+		font-size: 1.1rem;
+	}
+	@include media(">=desktop") {
+		font-size: 1.2rem;
+	}
+}
+
+
+.underline {
+	background-image: linear-gradient(
+		120deg,
+		var(--orange) 0%,
+		var(--orange) 100%
+	);
+	background-repeat: no-repeat;
+	background-size: 110% 1rem;
+	background-position: 0% 95%;
+	z-index: -1;
+
+	@include media(">=laptop") {
+		background-size: 110% 1.6rem;
+		background-position: 0% 100%;
+	}
+}
