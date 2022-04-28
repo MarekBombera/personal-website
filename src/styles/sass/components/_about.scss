@@ -16,7 +16,7 @@
 	}
 
 	@include media(">=desktop") {
-		padding: 2rem 12rem 0;
+		padding: 2rem 13rem 0;
 	}
 
 
@@ -64,10 +64,16 @@
 		img {
 			width: 250px;
 			border-radius: 6px;
+			filter: grayscale(100%);
+			transition: all 0.4s ease-out;
 			
 			@include media(">=laptop") {
 				width: 400px;
 				border-radius: 24px;
+
+				&:hover {
+					filter: grayscale(0%);
+				}
 			}
 		}
 

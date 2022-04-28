@@ -21,11 +21,11 @@
 		}
 
 		@include media(">=laptop") {
-			margin: 3.5rem 0 0 6rem;
+			margin: 4.25rem 0 0 7rem;
 		}
 
 		@include media(">=desktop") {
-			margin: 3rem 0 0 10rem;
+			margin: 3.75rem 0 0 10rem;
 			
 		}
 
@@ -38,6 +38,7 @@
 			@include media(">=tablet") {
 				width: 75%;
 				font-size: 2.75rem;
+				
 			}
 
 			@include media(">=laptop") {
@@ -122,11 +123,12 @@
 		margin: 1rem 0 0;
 		gap: 1rem;
 		opacity: 0;
+
 		animation: 0.5s ease-out 2.75s 1 forwards showRestOfHeroContent;
 		
 		img {
 			width: 32px;
-			transition: all 0.25s ease-out;
+			transition: filter 0.25s ease-out;
 			
 			&:hover {
 				filter:  sepia(100%) grayscale(1000%) brightness(200%) ;
@@ -146,11 +148,14 @@
 			border: 1px solid var(--orange);
 			opacity: 0;
 			animation: 0.5s ease-out 2.75s 1 forwards showRestOfHeroContent;
+
 			@include media(">=laptop") {
 				transition: all 0.25s ease-out;
+				padding: 1rem 1.25rem 1.1rem;
 			}
 
 			@include media(">=desktop") {
+				padding: 1rem 1.35rem 1.1rem;
 				font-size: 1.2rem;
 			}
 

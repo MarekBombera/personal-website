@@ -4,6 +4,8 @@ import linvoice_img from '../../assets/linvoice.webp';
 import photosnap_img from '../../assets/photosnap.webp';
 import ip_address_finder_img from '../../assets/ipaddressfinder.webp';
 import space_tourism_img from '../../assets/space-tourism.webp';
+import tick_tack_toe_img from '../../assets/tick-tack-toe.webp';
+import audiophile_img from '../../assets/audiophile.webp';
 
 export const Projects = (): JSX.Element => {
 	return (
@@ -12,6 +14,21 @@ export const Projects = (): JSX.Element => {
 				<span className="underline">Projects</span>
 			</h2>
 			<Project
+				name="Audiophile"
+				description="E-commerce website for a fictional company called Audiophile. The website has integrated Stripe payments and uses local storage in a browser to remember users shopping cart."
+				technologies={[
+					'Next.js',
+					'Redux',
+					'Typescript',
+					'Styled-Components',
+					'Stripe API',
+					'Vercel',
+				]}
+				img={audiophile_img}
+				url="audiophile-audio.com"
+				gitHubLink="github.com/MarekBombera/audiophile"
+			/>
+			<Project
 				name="Linvoice"
 				description="Linvoice is a full-stack web app where users after signing in with their Google account can manage their invoices. "
 				technologies={[
@@ -19,6 +36,7 @@ export const Projects = (): JSX.Element => {
 					'Redux',
 					'Typescript',
 					'Sass',
+					'Jest',
 					'Node.js',
 					'Express',
 					'MySQL',
@@ -38,6 +56,7 @@ export const Projects = (): JSX.Element => {
 					'React',
 					'React-Router',
 					'Typescript',
+					'Jest',
 					'Sass',
 					'Netlify',
 				]}
@@ -63,12 +82,18 @@ export const Projects = (): JSX.Element => {
 				gitHubLink="github.com/MarekBombera/ip-address-finder"
 			/>
 			<Project
-				name="Space Tourism"
-				description="A website about space tourism company with information about destination, crew and technology which will take you to the space."
-				technologies={['React', 'React-Router', 'Sass', 'Netlify']}
-				img={space_tourism_img}
-				url="spacetourism-space.com/"
-				gitHubLink="github.com/MarekBombera/Linvoice-client"
+				name="Tick-Tack-Toe"
+				description="Classic Tic-Tac-Toe game. Choose to play in single-player mode against CPU or in two-player mode against your friend."
+				technologies={[
+					'React',
+					'Redux',
+					'Typescript',
+					'Styled-Components',
+					'Netlify',
+				]}
+				img={tick_tack_toe_img}
+				url="ticktacktoe-game.com/"
+				gitHubLink="github.com/MarekBombera/tick-tack-toe"
 			/>
 		</section>
 	);

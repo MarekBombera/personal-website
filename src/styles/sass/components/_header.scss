@@ -21,12 +21,12 @@
 	}
 
 	@include media(">=laptop") {
-		padding: 1.5rem 4.5rem;
+		padding: 1.5rem 10rem;
 		animation: 1s ease-out 2.75s 1 forwards showHeader;
 	}
 
 	@include media(">=desktop") {
-		padding: 2rem 6rem;
+		padding: 2rem 13rem;
 	}
 
 	&__logo {

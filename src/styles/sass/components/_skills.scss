@@ -15,7 +15,7 @@
 	}
 
    @include media(">=desktop") {
-		padding: 4rem 12rem 0;
+		padding: 4rem 13.1rem 0;
 	}
 
    &-heading {
@@ -86,10 +86,20 @@
       align-items: center;
       gap: 0.5rem;
 
+      @include media(">=laptop") {
+         gap: 0.7rem;
+      }
+
 
       &:hover > img {
          @include media(">=laptop") {
-            transform: scale(1.1)
+            transform: scale(1.1);
+         }
+      }
+
+      &:hover > p {
+         @include media(">=laptop") {
+            font-weight: 700;
          }
       }
 
@@ -97,8 +107,8 @@
 
       p {
          font-size: 1rem;
-         font-weight: 600;
-
+         font-weight: 500;
+         transition: all 0.25s ease-out;
          @include media(">=laptop") {
             font-size: 1.1rem;
             

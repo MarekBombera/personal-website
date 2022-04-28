@@ -156,11 +156,12 @@
 		}
 
 		@include media(">=laptop") {
+			width: 75%;
 			margin: 0.5rem 0 0;
 		}
 
 		@include media(">=desktop") {
-			width: 60%;
+			width: 64%;
 		}
 	}
 

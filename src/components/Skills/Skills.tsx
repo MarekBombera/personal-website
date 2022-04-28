@@ -31,6 +31,7 @@ export const Skills = (): JSX.Element => {
 				<Field img={js_img} text="Javascript" />
 				<Field img={ts_img} text="Typescript" />
 				<Field img={react_img} text="React" />
+				<Field img={nextjs_img} text="Next.js" className="nextjs" />
 				<Field img={html_img} text="HTML" />
 				<Field img={sass_img} text={'CSS & Sass'} />
 
@@ -42,10 +43,9 @@ export const Skills = (): JSX.Element => {
 				<Field img={jest_img} text="Jest" />
 			</div>
 			<p className="skills-body-learning body" data-aos="fade-up">
-				What I'm learning now:
+				What I'm working on now:
 			</p>
 			<div className="skills-learning" data-aos="fade-up">
-				<Field img={nextjs_img} text="Next.js" className="nextjs" />
 				<Field img={graphql_img} text="GraphQL" />
 			</div>
 		</div>

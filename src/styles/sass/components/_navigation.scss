@@ -7,7 +7,11 @@
       gap: 2rem;
 
       @include media(">=laptop") {
-         gap: 4rem;
+         gap: 3.25rem;
+      }
+
+      @include media(">=desktop") {
+         gap: 3.75rem;
       }
 
    	p {
@@ -17,12 +21,19 @@
          }
 
          @include media(">=laptop") {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
+         }
+
+         @include media(">=desktop") {
+            font-size: 1.4rem;
+            
          }
       }
+      
 
       &-underline {
-			
+       
+			position: relative;
 			background-image: linear-gradient(
 				120deg,
 				var(--orange) 0%,
@@ -43,8 +54,10 @@
          &:hover {
             @include media(">=laptop") {
                transform: translateY(-6%);
+               
             }
          }
+
 		}
    }
 }

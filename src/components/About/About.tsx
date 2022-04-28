@@ -22,8 +22,8 @@ export const About = (): JSX.Element => {
 					and learn.
 				</p>
 				<p className="body">
-					This led me into exciting web development rabid hole, and I decided to
-					become a developer myself.
+					This led me into exciting web development rabbit hole, and I decided
+					to become a developer myself.
 				</p>
 				<p className="body">
 					Since then I haven't stopped learning and creating.

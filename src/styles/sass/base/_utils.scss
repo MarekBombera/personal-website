@@ -47,7 +47,7 @@
 	z-index: -1;
 
 	@include media(">=laptop") {
-		background-size: 110% 1.6rem;
+		background-size: 100% 1.6rem;
 		background-position: 0% 100%;
 	}
 }
