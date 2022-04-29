@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useState, useRef } from 'react';
 import { Formik } from 'formik';
 
 import { ContactForm } from './ContactForm/ContactForm';
@@ -6,9 +6,11 @@ import { validationSchema } from './validationSchema';
 import emailjs from '@emailjs/browser';
 
 export const Contact = (): JSX.Element => {
+	const [showMessage, setShowMessage] = useState(false);
 	const form = useRef<any>('');
 
 	const handleSubmit = (resetForm: any): void => {
+		setShowMessage(true);
 		emailjs
 			.sendForm(
 				process.env.REACT_APP_SERVICE!,
@@ -19,7 +21,7 @@ export const Contact = (): JSX.Element => {
 			.then(resetForm())
 			.then(
 				(result) => {
-					console.log(result.text);
+					console.log(`Email status - ${result.text}`);
 				},
 				(error) => {
 					console.log(error.text);
@@ -40,7 +42,7 @@ export const Contact = (): JSX.Element => {
 				onSubmit={(values, { resetForm }) => handleSubmit(resetForm)}
 				validationSchema={validationSchema}
 				component={(formikProps) => (
-					<ContactForm {...formikProps} form={form} />
+					<ContactForm {...formikProps} form={form} showMessage={showMessage} />
 				)}
 			/>
 		</section>

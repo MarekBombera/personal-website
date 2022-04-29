@@ -23,12 +23,16 @@
 
 	&-text {
 		font-weight: 600 !important;
-		
+		text-align: center;
 		@include media(">=laptop") {
 			margin-top: 4rem;
 			text-align: center;
 			font-weight: 700 !important;
 		}
+	}
+
+	&-thankYou {
+		text-align: center;
 	}
 
 

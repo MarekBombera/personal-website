@@ -13,7 +13,11 @@ export const Project = ({
 	gitHubLink,
 }: any): JSX.Element => {
 	const renderTechnologies = technologies.map((tech: string) => {
-		return <p className="project-tech">{tech}</p>;
+		return (
+			<p key={tech} className="project-tech">
+				{tech}
+			</p>
+		);
 	});
 
 	const renderMobileVersion = (): JSX.Element => {

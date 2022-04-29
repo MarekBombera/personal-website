@@ -15,7 +15,7 @@ export const Projects = (): JSX.Element => {
 			</h2>
 			<Project
 				name="Audiophile"
-				description="E-commerce website for a fictional company called Audiophile. The website has integrated Stripe payments and uses local storage in a browser to remember users shopping cart."
+				description="E-commerce website with 11 pages for a fictional company called Audiophile. The website has integrated Stripe payments and uses local storage in a browser to remember users shopping cart."
 				technologies={[
 					'Next.js',
 					'Redux',
@@ -30,7 +30,7 @@ export const Projects = (): JSX.Element => {
 			/>
 			<Project
 				name="Linvoice"
-				description="Linvoice is a full-stack web app where users after signing in with their Google account can manage their invoices. "
+				description="Linvoice is a full-stack web app where users can manage their invoices. The app uses Google OAuth 2.0 for authentication."
 				technologies={[
 					'React',
 					'Redux',
@@ -51,7 +51,7 @@ export const Projects = (): JSX.Element => {
 			/>
 			<Project
 				name="Photosnap"
-				description="Website I created for a fictional photo-sharing company called Photosnap. The website layout was built mainly with css grid."
+				description="Website created for a fictional photo-sharing company called Photosnap. The website layout was built mainly with css grid."
 				technologies={[
 					'React',
 					'React-Router',
@@ -67,7 +67,7 @@ export const Projects = (): JSX.Element => {
 			/>
 			<Project
 				name="Ip Address Finder"
-				description="An app that displays users IP address with some basic information and finds its approximate location on the map. Users can also search for any IPv4 or IPv6."
+				description="An app that displays users IP address with some information about its origin and finds its approximate location on the map. Users can also search for any IPv4 or IPv6."
 				technologies={[
 					'React',
 					'Redux',
@@ -83,7 +83,7 @@ export const Projects = (): JSX.Element => {
 			/>
 			<Project
 				name="Tick-Tack-Toe"
-				description="Classic Tic-Tac-Toe game. Choose to play in single-player mode against CPU or in two-player mode against your friend."
+				description="Classic Tic-Tac-Toe game with light and dark mode. Choose to play in a single-player mode against CPU or in a two-player mode against your friend."
 				technologies={[
 					'React',
 					'Redux',

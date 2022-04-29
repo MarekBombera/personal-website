@@ -39,11 +39,11 @@
 			}
 
 			@include media(">=laptop") {
-				width: 58px;
+				width: 64px;
 			}
 
 			@include media(">=desktop") {
-				width: 70px;
+				width: 74px;
 			}
 		}
 	}

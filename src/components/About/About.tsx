@@ -13,24 +13,23 @@ export const About = (): JSX.Element => {
 					Czechia.
 				</p>
 				<p className="body">
-					My interest in web development started in 2020 when I decided to
-					create a WordPress website and then tried to insert custom HTML into
-					it.
+					My web development journey started in late 2019 when I created my
+					first WordPress website and tried to insert custom HTML into it.
 				</p>
 				<p className="body">
-					Turned out I had no idea what to do, and the only solution was to go
-					and learn.
+					Turned out to be quite a challenge at the time, and the only solution
+					was to dive in and learn.
 				</p>
 				<p className="body">
-					This led me into exciting web development rabbit hole, and I decided
-					to become a developer myself.
+					This led me into an exciting web development rabbit hole which I fell
+					in love with.
 				</p>
 				<p className="body">
-					Since then I haven't stopped learning and creating.
+					Since then, I haven't stopped learning and creating.
 				</p>
 				<p className="body">
-					I take pride in <span></span>writing clean code and taking on any
-					problem thrown at me.
+					I'm always working to be better at what I'm doing, and I don't shy
+					await from any problems thrown at me.
 				</p>
 				<p className="body">
 					I'm able to work independently and collaboratively in a team.

@@ -4,6 +4,7 @@ import { Error } from '../Error/Error';
 export const ContactForm: (props: any) => JSX.Element = ({
 	handleSubmit,
 	form,
+	showMessage,
 }) => {
 	return (
 		<form ref={form} onSubmit={handleSubmit} className="contact__form">
@@ -27,6 +28,11 @@ export const ContactForm: (props: any) => JSX.Element = ({
 				name="message"
 				component={() => <Error message="Message Required" />}
 			/>
+			{!showMessage ? null : (
+				<p className="contact-thankYou body">
+					Thank you for contacting me I'll get back to you as soon as possible.
+				</p>
+			)}
 
 			<button type="submit">Send</button>
 		</form>
