@@ -9,7 +9,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1.25rem 3rem;
+	padding: 1.25rem 2rem;
 	width: 100%;
 	opacity:0;
 	animation: 1s ease-out 2.75s 1 forwards showHeader;
@@ -32,7 +32,7 @@
 	&__logo {
 		z-index: 999;
 		img {
-			width: 38px;
+			width: 50px;
 			
 			@include media(">=tablet") {
 				width: 44px;

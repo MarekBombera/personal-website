@@ -2,7 +2,7 @@
 
 .hero {
 	display: grid;
-	padding: 0 3rem 0rem;
+	padding: 0 2rem;
 	height: 100vh;
 	background: var(--background);
 
@@ -59,7 +59,7 @@
 			color: white;
 
 			@include media(">=phone") {
-				width: 95%;
+				width: 80%;
 				&,&::after {
 					animation-delay: var(--animation-delay, 2s);
 					animation-iteration-count: var(--iterations, 1);
