@@ -59,7 +59,7 @@
 			color: white;
 
 			@include media(">=phone") {
-				width: 80%;
+				width: 94%;
 				&,&::after {
 					animation-delay: var(--animation-delay, 2s);
 					animation-iteration-count: var(--iterations, 1);
