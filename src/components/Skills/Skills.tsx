@@ -1,6 +1,7 @@
 import js_img from '../../assets/icon-js.svg';
 import ts_img from '../../assets/icon-ts.svg';
 import react_img from '../../assets/icon-react.svg';
+import nextjs_img from '../../assets/icon-next.svg';
 import html_img from '../../assets/icon-html.svg';
 import sass_img from '../../assets/icon-sass.svg';
 
@@ -11,8 +12,8 @@ import docker_img from '../../assets/icon-docker.svg';
 import git_img from '../../assets/icon-git.svg';
 import jest_img from '../../assets/icon-jest.svg';
 
-import nextjs_img from '../../assets/icon-next.svg';
 import graphql_img from '../../assets/icon-graphql.svg';
+import cypress_img from '../../assets/icon-cypress.svg';
 
 import 'aos/dist/aos.css';
 
@@ -47,6 +48,7 @@ export const Skills = (): JSX.Element => {
 			</p>
 			<div className="skills-learning" data-aos="fade-up">
 				<Field img={graphql_img} text="GraphQL" />
+				<Field img={cypress_img} text="Cypress" />
 			</div>
 		</div>
 	);

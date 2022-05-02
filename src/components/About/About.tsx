@@ -3,7 +3,7 @@ import LazyLoad from 'react-lazyload';
 
 export const About = (): JSX.Element => {
 	return (
-		<div id="about" className="about">
+		<section id="about" className="about">
 			<h2 className="about-heading sectionHeading">
 				<span className="underline">About</span>
 			</h2>
@@ -41,6 +41,6 @@ export const About = (): JSX.Element => {
 				</LazyLoad>
 				<span className="about__photo-decoration"></span>
 			</div>
-		</div>
+		</section>
 	);
 };
