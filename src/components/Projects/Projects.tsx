@@ -3,9 +3,9 @@ import { Project } from './Project';
 import linvoice_img from '../../assets/linvoice.webp';
 import photosnap_img from '../../assets/photosnap.webp';
 import ip_address_finder_img from '../../assets/ipaddressfinder.webp';
-import space_tourism_img from '../../assets/space-tourism.webp';
 import tick_tack_toe_img from '../../assets/tick-tack-toe.webp';
 import audiophile_img from '../../assets/audiophile.webp';
+import spacex_img from '../../assets/spacex.webp';
 
 export const Projects = (): JSX.Element => {
 	return (
@@ -94,6 +94,23 @@ export const Projects = (): JSX.Element => {
 				img={tick_tack_toe_img}
 				url="ticktacktoe-game.com/"
 				gitHubLink="github.com/MarekBombera/tick-tack-toe"
+			/>
+			<Project
+				name="SpaceX"
+				description="SpaceX fanpage with information about the company, it's technology and upcoming launches"
+				technologies={[
+					'Next.js',
+					'Redux',
+					'Typescript',
+					'Styled-Components',
+					'GraphQL',
+					'Jest',
+					'Cypress',
+					'Vercel',
+				]}
+				img={spacex_img}
+				url="marekbombera.com"
+				gitHubLink="marekbombera.com"
 			/>
 		</section>
 	);
