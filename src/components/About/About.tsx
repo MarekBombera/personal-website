@@ -1,5 +1,4 @@
 import photo from '../../assets/photo.webp';
-import LazyLoad from 'react-lazyload';
 
 export const About = (): JSX.Element => {
 	return (
@@ -36,9 +35,7 @@ export const About = (): JSX.Element => {
 				</p>
 			</div>
 			<div className="about__photo" data-aos="fade-up">
-				<LazyLoad once>
-					<img src={photo} alt="My Photo" />
-				</LazyLoad>
+				<img src={photo} alt="My Photo" />
 				<span className="about__photo-decoration"></span>
 			</div>
 		</section>

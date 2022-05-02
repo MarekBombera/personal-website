@@ -78,9 +78,7 @@ export const Project = ({
 					href={`https://www.${url}`}
 					target="_blank"
 				>
-					<LazyLoad once>
-						<img className="project-img" src={img} alt="" />
-					</LazyLoad>
+					<img className="project-img" src={img} alt="" />
 				</a>
 			</div>
 		);
