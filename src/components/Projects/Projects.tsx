@@ -97,7 +97,7 @@ export const Projects = (): JSX.Element => {
 			/>
 			<Project
 				name="SpaceX"
-				description="SpaceX fanpage with information about the company, it's technology and upcoming launches"
+				description="SpaceX fanpage with information about the company, it's technology and upcoming launches."
 				technologies={[
 					'Next.js',
 					'Redux',
